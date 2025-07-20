@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dih</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1 class="texxt">Enter you penis size:</h1>
+  <input type="text" id="inputed">
+  <button id="button" onclick="storeInput()">submit</button>
+</div>
+  <script>
+    function storeInput(){
+      const container = document.querySelector('.container');      
+      const inputelement = document.getElementById('inputed');
+      const inputValue = inputelement.value;
+      const para = document.createElement('p');
+      let a="<";
+      for(let i=0;i<inputValue;i++){
+        a+="=";
+      }
+      a+="3";
+    
+    para.textContent = a;
+    para.className ="damn";
+    container.appendChild(para);
+    changeheading();
+    removeInput();
+    
+    }
+    function changeheading(){
+      const head = document.querySelector(
+        "h1");
+      head.className='wow';
+      head.textContent = "Wow that's a long penis, here is a visual reprezentation:";
+      
+
+  }
+  function removeInput(){
+    const inputelement = document.getElementById('inputed');
+    inputelement.remove();
+    const button = document.querySelector("#button");
+    button.remove();
+
+  }
+    
+    
+
+  </script>
+  
+</body>
+</html>
